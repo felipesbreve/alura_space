@@ -1,11 +1,11 @@
-{% extends 'galeria/base.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block content %}
             <section class="conteudo">
                 <section class="imagem">
                     <div class="imagem__conteudo">
                         {% if fotografia.foto == "" or fotografia.foto == null %}
-                            <img class="card__imagem" src="{% static '/assets/imagens/galeria/not-found.png' %}" alt="foto">
+                            <img class="card__imagem" src="{% static '/assets/imagens/not-found.png' %}" alt="foto">
                         {% else %}
                             <img class="card__imagem" src="{{ fotografia.foto.url }}" alt="foto">
                         {% endif %}
